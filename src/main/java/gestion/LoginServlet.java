@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 		if (validCredentials) {
 			DAOUsuario daoPersona=new DAOUsuario();
 			Usuario usuario=daoPersona.getUsuario(username);
-			// Guardar el usuario en la sesión
+			// Guardar el usuario en la sesion
 			session.setAttribute("userLogado", true);
 			session.setAttribute("user", usuario);
 			response.sendRedirect("productos.jsp");
@@ -48,18 +48,18 @@ public class LoginServlet extends HttpServlet {
 	 * y el password. False, en caso contrario.
 	 */
 	private boolean checkLoginCliente(String username, String password) {
-		DAOUsuario daoUsuario=new DAOUsuario();//Se crea un objeto daoUsuario, que nos permite obtener informacion de los usuario de la BD
-		Usuario usuario=daoUsuario.getUsuario(username);//Obtenemos el Usuario, cuyo username es el prorporcionado. 
-		//En caso de no existir el metodo devolvera null
+		//Crea un objeto daoUsuario, que nos permita obtener informacion de los usuario de la BD
+		//Obtiene el Usuario, cuyo username es el prorporcionado. En caso de no existir el metodo devolvera null
 		
 		
-		//TODO añadir logica, para comproba si el username y password coinciden
+		//TODO incluir logica, para comproba si el username y password coinciden
 		//actualmente devuelve siempre true. Por lo que siempre se puede entrar.
 		//Hay que tener en cuenta que no todos los Usuarios, son CLientes. Los Clientes son
 		//los usuario que se pueden logar.
 		return true;
 	}
 
+	
 	public static String obtenerNombreUsuario(HttpSession session, HttpServletResponse response2) {
 		Usuario usuario=null;
 		String resultado="Unknown";

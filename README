@@ -1,0 +1,8 @@
+Para que funcione:
+1- Instalar pluguin web
+2- Run as --> Run on server --> Seleccionar Tomcat 10.0
+Instalarlo. Tarda un tiempo en poner habilitado boton finish
+3- En properties del proyecto --> Java build path --> Classpath
+--> add library --> Server runtime --> Tomcat 10.0.
+
+Y listo para ejecutar

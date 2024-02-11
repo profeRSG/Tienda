@@ -41,17 +41,16 @@ public class PedidoServlet extends HttpServlet {
      * 
      * @param idProducto. id del producto del pedido
      * @param usuario. Cliente que realiza el pedido
-     * @return Un objeto pedido, con toda la información del producto, usuario
+     * @return Un objeto pedido, con toda la informacion del producto, usuario
      * y fecha de compra.
      */
-    
 	private Pedido crearPedido(int idProducto, Cliente usuario) {
 		
 		return new Pedido(new Producto(1, null, null, 0, null), usuario, LocalDate.of(12,12,12));
 		//TODO, actualmente se crea un pedido con los mismo datos. Se debe borrar esta linea
 		//y crear un pedido que tenga como producto, el que tiene como id idProducto
 		//y que tenga como fecha de compra la actual, y como cliente
-		//el parametro usuario.
+		//el parametro usuario. Para acceder a la BD utilizar un objeto de DAOProducto.
 	}
 
    
